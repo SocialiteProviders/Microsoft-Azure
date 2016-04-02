@@ -33,7 +33,7 @@ class Provider extends AbstractProvider implements ProviderInterface
     protected function getAuthUrl($state)
     {
         return $this->buildAuthUrlFromBase(
-            'https://login.windows.net/common/oauth2/authorize', $state
+            'https://login.microsoftonline.com/common/oauth2/authorize', $state
         );
     }
 
@@ -42,7 +42,7 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getTokenUrl()
     {
-        return 'https://login.windows.net/common/oauth2/token';
+        return 'https://login.microsoftonline.com/common/oauth2/token';
     }
 
     public function getAccessToken($code)
